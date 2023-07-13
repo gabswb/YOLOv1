@@ -1,4 +1,5 @@
 import os
+import sys
 import torch
 import torch.optim as optim
 from torch.utils.data import DataLoader
@@ -191,6 +192,8 @@ def train():
 
 
 if __name__ == '__main__':
+
+    root = sys.argv[1]
 
     model = Yolo(grid_size, num_boxes, num_classes)
     model = model.to(device)
