@@ -6,7 +6,7 @@ from torch.utils.data import DataLoader
 
 from model.yolo import Yolo
 from model.loss import Loss
-from data import VOCDetection
+from data.data import VOCDetection
 
 from tqdm.notebook import tqdm as tqdm2
 from tqdm import tqdm
@@ -217,3 +217,5 @@ if __name__ == '__main__':
     compute_loss = Loss(device, grid_size, num_boxes, num_classes)
 
     os.makedirs(ckpt_dir)
+
+    train()
